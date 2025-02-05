@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<header>
+	<img src="assets/JAZBAA.svg" alt="Jazbaa Logo" width="150">
+	<nav>
+		<a href="#about">About us</a>
+		<a href="#shop">Shop</a>
+		<a href="#events">Events Calendar</a>
+		<a href="gallery.html">Gallery</a>
+	</nav>
+</header>
+
 <title>Past Events</title>
 <section class="cd-horizontal-timeline">
 	<div class="timeline">
@@ -70,6 +80,51 @@
 	</div>
 </section>
 <style>
+	@media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+            }
+        }
+		header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ccc;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: 400;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: #365a97;
+        }
 	.gallery {
 		display: flex;
 		overflow-x: auto;
@@ -84,7 +139,7 @@
 		height:400px; /* Adjust the height for landscape orientation */
 		object-fit: cover; /* Ensures the image fills the area without distortion */
 		border-radius: 5px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 4px 6px rgba(72, 72, 72, 0.1);
 	}
 
 	.gallery::-webkit-scrollbar {
@@ -97,7 +152,7 @@
 	}
 
 	.gallery::-webkit-scrollbar-thumb:hover {
-		background-color: #999;
+		background-color: #ffffff;
 	}
   
     .cd-horizontal-timeline .events li,
@@ -140,11 +195,11 @@ body {
   font-size: 1.6rem;
   font-family: "Source Sans Pro", sans-serif;
   color: #393939;
-  background-color:#FDFFF5;
+  background-color:#ffffff;
 }
 
 a {
-  color: #7b9d6f;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -807,4 +862,411 @@ jQuery(document).ready(function($){
 		return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
 	}
 });
+</script>
+<html>
+<section class="contact">
+	<h3>Get In Touch</h3>
+	<div class="contact-container">
+		<div class="contact-info">
+			<p>Email</p>
+			<p><a href="mailto:culturalministry@ashoka.edu.in">culturalministry@ashoka.edu.in</a></p>
+			<hr>
+			<div class="social-title">Social Media</div>
+			<div class="social-icons">
+				<img src="./images/Instagram.svg" alt="Instagram">
+				<img src="./images/TwitterX.svg" alt="Twitter">
+				<img src="./images/Facebook.svg" alt="Facebook">
+			</div>
+			<hr>
+		</div>
+		<form class="contact-form">
+			<div class="form-row">
+				<input type="text" class="form-input first-name" placeholder="First name" required>
+				<input type="text" class="form-input last-name" placeholder="Last name" required>
+			</div>
+			<div class="form-row">
+				<input type="email" class="form-input email" placeholder="Email" required>
+				<input type="tel" class="form-input phone" placeholder="Phone" required>
+			</div>
+			<textarea rows="4" class="form-input message" placeholder="Message"></textarea>
+			<button class="contact-submit">Submit</button>
+		</form>
+	</div>
+</section>
+<!-- CONTACT SEC ends-->
+</html>
+<style>
+@import url(https://fonts.google.com/share?selection.family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900);
+
+.dummy {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --skin-col: #FAD1BB;
+    --darkskin: #F9B292;
+    --lightskincol: #FABE9A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.main-container {
+    width: 1358px;
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px;
+    background-color: rgb(255, 253, 100%);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 16px;
+ 
+
+}
+
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.about-us {
+    background: linear-gradient(to right, #FAD1BB, #FAD2BB, #FAD3BA, #FAD4BA, #FAD5BA, #FAD6BA, #FAD7BA,
+            #FAD8BA, #FAD9BA, #FAD8B9, #FAD7B8, #FAD6B7, #FAD5B6, #FAD5B5, #FAD4B5, #FAD3B4, #FAD3B3, #FAD2B3, #FAD1B2, #FAD1B1, #F9D0B1,
+            #F9CFB0, #F9CFAF, #F9CDAE, #F9CBAB, #F9C9AA, #F9C7A8, #F9C2A3, #F9BC9D, #F9B999, #F9B798, #F9B595, #F9B494, #F9B595, #F9B696, #F9B997, #F9BA97,
+            #F9BB98, #FABC99, #FABE9A, #FAC09C, #F9C29E, #F9C49F, #F9C6A1,
+            #F9C7A2, #F9C9A4, #F9CDA7, #F9CFA9, #fad2bd, #FAD2BB);
+    width:100vw;
+}
+
+.about-us h1 {
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 524px;
+    margin-right: 530px;
+    width: 224px;
+    height: 45px;
+}
+
+.team h1 {
+    margin: top 87px;
+    font-size: 48px;
+    font-weight: 500;
+    width: 280px;
+    height: 56px;
+
+}
+
+.dropdown-container {
+    margin: 64px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+}
+
+.dropdown-container:last-child{
+    padding-bottom: 50px;
+    border-bottom: 1px solid #000;
+}
+
+.dropdown-button {
+    background-color: transparent;
+    color: black;
+    font-weight: 200;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: grab;
+    font-size: 48px;
+}
+
+.dropdown-button:hover {
+    background-color: white;
+}
+
+.dropdown-content {
+    display: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 102px;
+    margin-top: 31px;
+    margin-left: 161px;
+    padding: 10px;
+    background-color: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Profile Cards Styling */
+.profile-card {
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    width: 250px;
+    padding-top: 31px;
+    padding-left: 161px;
+    border: none;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.profile-card img {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    font-size: 24px;
+    margin: 5px 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.profile-card p {
+    font-size: 17px;
+    color: black;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+
+
+.contact {
+    background: #fffdfd;
+    padding: 0px;
+    max-width: none;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+.contact h3 { /* Get in touch */
+   display: inline-block;
+    text-align: flex;
+    margin-left: 54px;
+    font-weight: 100;
+    width: 270px;
+    height: 47px;
+    font-size: 40px;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-left: 53.41px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contact-info p { /* EMAIL*/
+    margin:0px;
+    width: 61.32px;
+    font-size: 20px;
+    color: black;
+    font-weight: 300;
+    
+}
+
+
+.contact-info a {
+    width: 339.24px;
+    height: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.contact-info hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0;
+}
+
+.social-title{
+    font-size: 20px;
+    width:138.46px;
+    height: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.social-icons img {
+    width: 34.6px;
+    height: 24px;
+    margin-right: 10px;
+    cursor: grab;
+}
+
+.contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.first-name{
+    color: rgb(0, 0, 0);
+   background:#d3d3d3;
+    width: 206.71px;
+    height: 39px;
+}
+
+.last-name{
+    color: rgb(0, 0, 0);
+    background:#d3d3d3;
+    width: 206.71px;
+    height: 39px;
+}
+
+.email{
+    color: rgb(0, 0, 0);
+    background:#d3d3d3;
+    width: 206.71px;
+    height: 39px;
+}
+
+.phone{
+    color: rgb(0, 0, 0);
+    background:#d3d3d3;
+    width: 206.71px;
+    height: 39px;
+}
+
+textarea {
+    background:#d3d3d3;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-submit{
+    width: 177.04px;
+    height: 40px;
+    padding: 12px 24px;
+    background:#d3d3d3;
+    color: rgb(0, 0, 0);
+    border:none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: grab;
+    transition: 0.3s;
+    font-weight: 100;
+}
+
+button:hover {
+    background:  none;
+}
+
+.contact-submit:active{
+    transform: scale(0.95);
+    background: #a9a9a9;
+}
+
+.Search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.5;
+}
+
+.Search-button {
+    background: none;
+    border: none;
+    cursor: grab;
+    padding: 0px;
+}
+
+.Search-button img {
+    width: 36px;
+    height: 36px;
+}
+
+.Search-box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(30px);
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    width: 200px;
+}
+
+.Search-box.active {
+    max-width: 200px;
+    opacity: 1;
+}
+
+.card{
+    width: 50px;
+    height: 200px;
+    background-color: white;
+    align-items: center;
+
+}
+</style>
+<script>
+	  // Contact form submission
+	  const contactForm = document.querySelector(".contact-form")
+  
+  if (contactForm) {
+	contactForm.addEventListener("submit", (e) => {
+	  e.preventDefault()
+	  console.log("Form submitted")
+	  // Add your form submission logic here
+	})
+  } else {
+	console.error("Contact form not found")
+  }
+
 </script>
