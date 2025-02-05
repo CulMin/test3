@@ -13,53 +13,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .card-group {
-  display: flex;
-  gap: 15px; 
-}
-
-.card {
-  background-color: #1e1e2d; /* Dark card background */
-  color: #ffffff; /* Light text */
-  border: 1px solid #2a2a3c; /* Subtle border */
-  border-radius: 8px; /* Slightly rounded corners */
-  overflow: hidden;
-  width: 50%;
-  height: 100%;
-}
-
-.card-img-top {
-  width: 100%; 
-  height: 300px; /* Fixed height for uniformity */
-  object-fit: cover; /* Ensure images fit well */
-}
-
-.card-body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-
-.card-text {
-  font-size: 1rem;
-  opacity: 0.9; /* Slightly faded for better readability */
-}
-
-.text-body-secondary {
-  color: #a0a0b0; /* Muted text color */
-}
-
-/* Add a hover effect */
-.card:hover {
-  background-color: #29293d;
-  transition: transition 0.3s ease-in-out;
-}
 
         header {
             position: sticky;
@@ -69,34 +22,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            border-bottom: 1px solid #ccc;
+            padding: 20px 40px;
             flex-wrap: wrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav {
             display: flex;
-            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
             justify-content: center;
         }
 
         nav a {
-            margin: 10px;
+            margin: 0;
             text-decoration: none;
             color: black;
-            font-weight: 400;
-            font-size: 16px;
-            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #365a97;
-        }
-
-        .hero img {
-            width: 100%;
-            height: auto;
-            display: block;
         }
 
         .glimpses {
@@ -106,12 +55,10 @@
 
         .carousel-container {
             position: relative;
-            width: auto;
-            max-width: 800px;
-            height: 500px;
+            width: 100%;
+            max-width: 1400px;
             margin: auto;
             overflow: hidden;
-            border-radius: 10px;
         }
 
         .carousel {
@@ -120,67 +67,156 @@
         }
 
         .carousel img {
-            width: 150%;
-            height: 100%;
+            width: 100%;
+            height: 800px;
             object-fit: cover;
             flex-shrink: 0;
         }
 
-        .prev-btn, .next-btn {
-            background-color: rgba(0, 0, 0, 0.7);
+        .hero img {
+            width: 100%;
+            display: block;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
             padding: 10px;
             cursor: pointer;
-            font-size: 20px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
             border-radius: 50%;
-            opacity: 0.8;
+            z-index: 1;
         }
 
-        .prev-btn:hover, .next-btn:hover {
-            opacity: 1;
+        .nav-btn:hover {
+            background-color: black;
         }
 
-        .prev-btn { left: 10px; }
-        .next-btn { right: 10px; }
+        .prev { left: 10px; }
+        .next { right: 10px; }
 
-        .upcoming {
+        .upcoming-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #1e3558;
+            color: #ffffff;
+            border: 1px solid #2a2a3c;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 90%;
+            margin: 20px auto;
             padding: 20px;
             text-align: center;
-            min-height: 300px; 
-            font-size: 25px;
+            flex: 0 0 100%;
         }
 
-        footer {
-            background-color: black;
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 50px;
+        }
+
+        .footer {
+            background: black;
+            color: #FFFDFD;
+            padding: 2rem 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 1rem;
+        }
+
+        .line {
+            height: 2px;
+            background-color: white;
+            width: 40vw;
+            margin: 0.7rem auto;
+        }
+
+        .footer-section h1 {
+            font-weight: 100;
+            font-size: 40px;
+            line-height: 1.2;
+            margin: 0.2rem 0;
+        }
+
+        .footer-section p {
+            margin: 0;
+            font-size: 20px;
             color: white;
-            padding: 20px;
-            text-align: left;
-            margin-top: auto; 
+            font-weight: 300;
         }
 
-        footer a {
+        .footer-section a {
             color: white;
             text-decoration: none;
-            margin-right: 10px;
+        }
+
+        .footer-section a:hover {
+            color: #ababae;
+        }
+
+        .social-icons {
+            margin: 1rem 0 0.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            font-size: 1.8rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ababae;
         }
 
         @media (max-width: 768px) {
-            header {
+            header, nav {
                 flex-direction: column;
                 text-align: center;
             }
 
-            nav {
-                flex-direction: column;
-            }
-
             nav a {
                 display: block;
+            }
+
+            .carousel img {
+                height: 400px;
+            }
+
+            .footer-section h1, .footer-section p, .social-icons a {
+                font-size: 20px;
+            }
+
+            .social-icons {
+                gap: 15px;
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -189,101 +225,101 @@
     <header>
         <img src="assets/JAZBAA.svg" alt="Jazbaa Logo" width="150">
         <nav>
-            <a href="about-us.html">About us</a>
+            <a href="#about">About us</a>
             <a href="#shop">Shop</a>
             <a href="#events">Events Calendar</a>
-            <a href="gallery.html">Gallery</a>
+            <a href="#gallery">Gallery</a>
         </nav>
     </header>
 
     <section class="hero">
-        <img src="assets/building.png" alt="Campus Image"> 
+        <img src="assets/building.png" alt="Campus Image">
     </section>
 
     <section class="glimpses">
         <h2>GLIMPSES</h2>
         <div class="carousel-container">
-            <button class="prev-btn">&#10094;</button>
-            <div class="carousel">
-                <img src="assets/Red event.JPG" alt="Glimpse">
-                <img src="assets/shaam-e-jazbaa.JPG" alt="Glimpse">
-                <img src="assets/Onam.JPG" alt="Glimpse">
-                <img src="assets/Freshers.jpg" alt="Glimpse">
-                <img src="assets/Shaam-e-Jazbaa2.JPG" alt="Glimpse">
+            <button class="nav-btn prev" onclick="prevSlide('glimpseCarousel')">&#10094;</button>
+            <div class="carousel" id="glimpseCarousel">
+                <img src="assets/Red event.JPG" alt="Event">
+                <img src="assets/shaam-e-jazbaa.JPG" alt="Shaam-e-jazbaa 2024">
+                <img src="assets/Onam.JPG" alt="Onam 2024">
+                <img src="assets/Freshers.jpg" alt="Freshers 2024">
             </div>
-            <button class="next-btn">&#10095;</button>
+            <button class="nav-btn next" onclick="nextSlide('glimpseCarousel')">&#10095;</button>
         </div>
     </section>
 
-    <section class="upcoming">
-        <h2>Upcoming</h2>
-        <div class="card-group">
-            <div class="card">
-            <img src="assets/Winter ball.jpeg" class="card-img-top" alt="Winter Ball">
-              
-          
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Venue:</small></p>
-                <p class="card-text"><small class="text-body-secondary">Time:</small></p>
-              </div>
+    <section class="upcoming-container">
+        <h2>Upcoming Events</h2>
+        <div class="card">
+            <img src="assets/winterball.jpg" alt="Winter Ball">
+            <div class="card-body">
+                <h3>Winter Ball</h3>
+                <p>The first of many unforgettable nights this year is almost here! Get ready for the Winter Ball – an evening filled with elegance, glamour, music, and dance</p>
+                <p>Venue: Mess Lawns | Time: 7 PM</p>
             </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-          
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-          
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
+        </div>
     </section>
 
-    <footer>
-        <div>
-            <p><strong>Get In Touch</strong></p>
-            <p>Email: <a href="mailto:culturalministry@ashoka.edu.in">culturalministry@ashoka.edu.in</a></p>
-            <p>Social Media:
-                <a href="#">Instagram</a> |
-                <a href="#">Facebook</a>
-            </p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h1>Get In Touch</h1>
+                <p>Email:</p>
+                <a href="mailto:culturalministry@ashoka.edu.in">culturalministry@ashoka.edu.in</a>
+                <div class="line"></div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/jazbaa.ashoka/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/JazbaaAshoka"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/jazbaa-the-cultural-ministry/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://form.jotform.com/242996769922074"><i class="fa-solid fa-align-right"></i></a>
+                </div>
+                <div class="line"></div>
+            </div>
         </div>
-    </footer> 
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jazbaa. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const currentIndexes = {};
+
+        function updateCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const items = carousel.children;
+            const itemWidth = carousel.offsetWidth;
+            currentIndexes[carouselId] = currentIndexes[carouselId] || 0;
+            carousel.style.transform = `translateX(-${currentIndexes[carouselId] * itemWidth}px)`;
+        }
+
+        function nextSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const items = carousel.children;
+            currentIndexes[carouselId] = (currentIndexes[carouselId] + 1) % items.length;
+            updateCarousel(carouselId);
+        }
+
+        function prevSlide(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const items = carousel.children;
+            currentIndexes[carouselId] = (currentIndexes[carouselId] - 1 + items.length) % items.length;
+            updateCarousel(carouselId);
+        }
+
+        function autoSlide(carouselId) {
+            setInterval(() => nextSlide(carouselId), 3000);
+        }
+
+        window.addEventListener('load', () => {
+            updateCarousel('glimpseCarousel');
+            autoSlide('glimpseCarousel');
+        });
+
+        window.addEventListener('resize', () => {
+            updateCarousel('glimpseCarousel');
+        });
+    </script>
 </body>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel");
-    const images = document.querySelectorAll(".carousel img");
-    let index = 0;
-
-    function updateCarousel() {
-        carousel.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function nextSlide() {
-        index = (index + 1) % images.length;
-        updateCarousel();
-    }
-
-    function prevSlide() {
-        index = (index - 1 + images.length) % images.length;
-        updateCarousel();
-    }
-
-    document.querySelector(".next-btn").addEventListener("click", nextSlide);
-    document.querySelector(".prev-btn").addEventListener("click", prevSlide);
-    setInterval(nextSlide, 3000);
-  });
-</script>
 </html>
