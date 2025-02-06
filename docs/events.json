@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "Meeting with Team",
+        "start": "2023-10-01T10:00:00",
+        "end": "2023-10-01T11:00:00",
+        "description": "Discuss project updates",
+        "category": "meetings"
+    },
+    {
+        "id": "2",
+        "title": "Project Deadline",
+        "start": "2023-10-05T23:59:00",
+        "description": "Submit final report",
+        "category": "deadlines"
+    }
+]
